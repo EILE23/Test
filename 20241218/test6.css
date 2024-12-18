@@ -1,0 +1,7 @@
+a:active{
+    color:#03c75a;
+}
+input:focus{
+    background-color: orange;
+    color:red;
+}
