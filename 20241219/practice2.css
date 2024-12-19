@@ -1,0 +1,17 @@
+.box{
+    width: auto;
+    height: 200px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.kdt{
+    width: 15%;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    Font-size:20px;
+}

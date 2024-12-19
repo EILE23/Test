@@ -1,0 +1,28 @@
+ /* margin : 다른 요소와의 거리, 바깥쪽 여백
+padding: border 와 content 간의 안쪽 여백 */
+.boxwrap{
+    display:flex;
+}
+.box{
+    background-color:green;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.box2{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+/* margin 0 외부 여백 없음
+auto 브라우저가 여백을 자동으로 계산 
+margin 적용 순서
+top right bottom left  예시
+margin: 10px; 전부 적용
+margin: 10px 10px; 상하, 좌우
+margin: 10px 10px 10px; 상 좌우 하
+margin: 10px 10px 10px 10px 상 우 하 좌
+한 쪽 방향에만 margin을 주고 싶을 땐 margin-right,left,top,bottom 사용
+*/
+

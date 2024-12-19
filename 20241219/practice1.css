@@ -1,0 +1,24 @@
+.box{
+    width: auto;
+    height: 200px;
+    background-color: orange;
+    display: flex;
+}
+.skyblue{
+    width: 200px;
+    height: 100px;
+    background-color: skyblue;
+    margin-right: 30px;
+}
+.green{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    margin-right: 30px;
+}
+.red{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    margin-right: 30px;
+}

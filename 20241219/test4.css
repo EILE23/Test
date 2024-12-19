@@ -1,0 +1,27 @@
+
+  .red{
+    width:100%;
+    background-color:red ;
+  }
+  .blue{
+    width:100%;
+    background-color: blue;
+  }
+  .black{
+    width:100%;
+    background-color: black;
+  }
+  .box{
+    width:100%;
+  }
+  .boxWrap{
+    max-width:1280px;
+    display: flex;
+    margin:0px auto;
+    justify-content:space-between;
+  }
+  /* margin:0px auto 화면 안의 내용들을 가운데로 정렬 */
+  /* display: flex; 화면 안의 내용들을 가로 정렬 */
+  /* justify-conent:space-between */
+  /* margin : 다른 요소와의 거리, 바깥쪽 여백
+padding: border 와 content 간의 안쪽 여백 */
