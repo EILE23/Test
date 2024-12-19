@@ -1,0 +1,19 @@
+/* [disabled]{
+    color:red;
+}
+[type="password"]{
+    color:red;
+}
+[Value="HEROPY"]{
+    color:blue;
+} */
+ /* [] 속성선택자 []괄호 안의 속성을 선택 */
+ [disable]{
+    background-color: red;
+ }
+ [placeholder="이름"]{
+    background-color: orange;
+ }
+ [value]{
+    background-color: blue;
+ }

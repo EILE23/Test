@@ -1,0 +1,25 @@
+/* .fruits :first-child{
+    color:red;
+} */
+/* :first-child class의 첫 번째 자식 */
+/* .fruits h3:last-child{
+    color:red;
+} */
+/* :last-child class의 막내 자식 */
+/* .fruits *:nth-child(2){
+    color:blue;
+} */
+/* :nth-child(n) class의 n번 째 자식 */
+/* .fruits *:nth-child(4){
+    color:blue;
+} */
+ /* :not(class) 괄호 안의 선택자를 제외하고 선택 */
+/* .fruits *:nth-child(2n){
+    color:red;
+}
+.fruits *:nth-child(2n+1){
+    color:blue;
+} */
+.fruits *:not(span){
+    color :red;
+}

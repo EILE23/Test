@@ -1,0 +1,19 @@
+/* .box::before{
+    content:"앞!";
+} */
+/* ::before */
+/* .box::after{
+    content:"뒤!";
+} */
+/* after */
+.box::before{
+    color:red;
+    content:"택시";
+}
+.box::after{
+    color:blue;
+    content:"빨리";
+}
+.box{
+    color:orange;
+}
