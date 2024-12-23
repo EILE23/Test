@@ -12,8 +12,11 @@ body{
     flex-direction: column;
     /* 텍스트 왼쪽 정렬 */
     text-align: left;
+    /* 요소 사이의 간격 */
+    gap: 20px;
 }
 .box2{
+    justify-content: center;
     display: flex;
     width: 600px;
     height: 120px;
@@ -21,9 +24,8 @@ body{
     background-color: white;
     border:1px ;
     padding-left:20px;
-    border-radius:8px;
+    border-radius:16px;
     border-top:6px solid purple;
-    /* google font kirang Haerang */
     font-family:"Dongle", serif;
     font-size:80px;
 }
@@ -32,7 +34,7 @@ body{
     font-size:23px;
     width: 600px;
     height: 120px;
-    border-radius:8px;
+    border-radius:12px;
     border-left:6px solid purple;
     padding-left: 30px;
     background-color: white;
@@ -45,34 +47,37 @@ input[type="text"]{
     height:23px;
     margin-left:30px;
 }
+select:hover{
+    background-color: rgb(212, 174, 212);
+}
 .box4{
     font-family: "Dongle", serif;
     font-size:23px;
     width: 600px;
     height: 200px;
     border:1px ;
-    border-radius: 8px;
+    border-radius: 12px;
     border-left:6px solid purple;
     line-height:10px;
     padding-left: 30px;
     background-color: white;
 }
 .box5{
-    margin-top:10px;
+  
     width: 600px;
-    height: 200px;
+    height: 130px;
     border-left:6px solid purple;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 12px;
     padding-right:15px;
     padding-left:15px;
     font-size:23px;    
+    line-height:5px;
 }
-textarea{
-    width: 600px;
-    height: 150px;
-    padding-left: 30px;
-    border-radius: 8px;
+.textareaWrap{
+   width: 600px;
+    padding-left: 20px;
+    border-radius: 12px;
     border-left:6px solid purple;
     border-right:1px;
     border-top:1px;
@@ -81,10 +86,15 @@ textarea{
     font-family: "Dongle", serif;
     font-size:23px;
 }
-textarea:active{
-    border:none;
-    border-left:6px solid purple;
+
+textarea{
+    width: 96%;
+    height: 150px;
+    border:1px;
+    font-family: "Dongle", serif;
+    font-size:23px;
 }
+
 /* input 위치 조정 */
 .input{
     border-radius:100px;
@@ -104,11 +114,25 @@ input[type="button"]:hover{
     background-color: purple;
 }
 .box6{
+    text-align: right;
     width: 600px;
+   
 }
 select{
     font-family: "Dongle", serif;
     font-size:20px;
     border-radius:8px;
     border:none;
+}
+button{
+    border-radius:8px;
+    border:1px;
+    color: black;
+    background-color: grey;
+    font-family: "Dongle", serif;
+    font-size:20px;
+    width: 60px;
+}
+button:hover{
+    background-color: purple;
 }

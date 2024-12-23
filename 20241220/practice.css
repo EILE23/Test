@@ -1,0 +1,159 @@
+#circle{
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    position:absolute;
+}
+#circle1{
+    border-radius:50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+}
+#circle2{
+    border-radius:50%;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+}
+#circle3{
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    position:absolute;
+}
+#stick{
+    width: 15px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    z-index:-1;
+}
+
+.one1{
+    top:200px;
+    left:200px;
+    background-color: red;
+    z-index:2;
+}
+.one2{
+    top:230px;
+    left:260px;
+    background-color: orange;
+    z-index:3;
+}
+.one3{
+    top:240px;
+    left:330px;
+    background-color: yellow;
+    z-index:2;
+
+}
+.one4{
+    top:250px;
+    left:400px;
+    background-color: green;
+    z-index:3;
+}
+.one5{
+    top:300px;
+    left:460px;
+    background-color: navy;
+    z-index:2;
+}
+.one6{
+    top:250px;
+    left:520px;
+    background-color: purple;
+    z-index:3;
+}
+.one7{
+    top:250px;
+    left:600px;
+    background-color: red;
+    z-index:2;
+}
+.one8{
+    top:225px;
+    left:620px;
+    background-color: orange;
+    z-index:3;
+}
+.one9{
+    top:200px;
+    left:640px;
+    background-color: yellow;
+    z-index:2;
+}
+.one10{
+    top:175px;
+    left:660px;
+    background-color: green;
+    z-index:3;
+}
+.box1{
+    top:20px;
+    left:15px;
+}
+.box2{
+    left:0px;
+    top:5px;
+}
+.box3{
+    top:30px;
+    left:15px;
+}
+.box4{
+    left:13px;
+    top:5px;
+}
+.box5{
+    left:290px;
+    top:300px;
+}
+.box6{
+    left:40px;
+    top:40px;
+}
+.box7{
+    left:7px;
+    top:16px;
+}
+.box8{
+    left:40px;
+    top:0px;
+}
+.box9{
+    left:5px;
+    top:2px;
+}
+.box10{
+    left:35px;
+    top:35px;
+}
+.box11{
+    left:14px;
+    top:16px;
+}
+.box12{
+    left:35px;
+    top:35px;
+}
+.box13{
+    left:16px;
+    top:10px;
+}
+.box14{
+    left: 380px;
+    top: 305px;
+}
+.box15{
+    left: 440px;
+    top: 320px;
+}
+.box16{
+    left: 520px;
+    top: 360px;
+}

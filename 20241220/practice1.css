@@ -1,0 +1,180 @@
+body{
+    height:3000px;
+}
+.container{
+    position: relative;
+    width:330px;
+    height:430px;
+    border:3px solid black;
+}
+#box{
+    width: 30px;
+    height: 30px;
+    background-color: purple;
+    position: absolute;
+}
+#box1{
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+}
+#box2{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+}
+#box3{
+    width: 210px;
+    height: 30px;
+    background-color: orange;
+    position: absolute;
+}
+#box4{
+    width: 30px;
+    height: 30px;
+    background-color: skyblue;
+    position: absolute;
+    z-index:1;
+}
+#box5{
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    position: absolute;
+}
+#box6{
+    width: 90px;
+    height: 30px;
+    background-color: orange;
+    position: absolute;
+}
+#box7{
+    width: 150px;
+    height: 30px;
+    background-color: orange;
+    position: absolute;
+}
+#box8{
+    width:140px;
+    height: 140px;
+    border:2px solid black;
+    position:fixed;
+    left:345px;
+    top:8px;
+}
+.box1{
+    bottom: 60px;
+}
+.box2{
+    bottom: 30px;
+}
+.box3{
+    bottom: 0px;
+}
+.box4{
+    left: 60px;
+    bottom: 0px;
+}
+.box5{
+    bottom: 0px;
+    left: 30px;
+}
+.box6{
+    bottom: 30px;
+    left:30px;
+}
+.box7{
+    bottom:0px;
+    left:90px;
+}
+.box8{
+    bottom:0px;
+    left:120px;
+}
+.box9{
+    bottom:0px;
+    left:180px;
+}
+.box10{
+    bottom:0px;
+    left:240px;
+}
+.box11{
+    bottom:110px;
+    left:110px;
+}
+.box12{
+    bottom:140px;
+    left:50px;
+}
+.box13{
+    bottom:195px;
+    left:20px;
+}
+.box14{
+    bottom:225px;
+    left:50px;
+}
+.box15{
+    bottom: 255px;
+    left: 50px;
+}
+.box16{
+    bottom: 285px;
+    left: 50px;
+}
+.box17{
+    bottom: 285px;
+    left:80px;
+}
+.box18{
+    bottom: 255px;
+    left:160px;
+}
+.box19{
+    bottom: 225px;
+    left: 220px;
+}
+.box20{
+    bottom: 195px;
+    left: 220px;
+}
+.box21{
+    bottom: 165px;
+    left: 220px;
+}
+.box22{
+    bottom: 165px;
+    left: 250px;
+}
+.box23{
+    bottom: 165px;
+    left: 280px;
+}
+.box25{
+    bottom:30px;
+    left:30px;
+    position: absolute;
+}
+.box26{
+    bottom:30px;
+    left:60px;
+    position: absolute;
+}
+.box27{
+    bottom:30px;
+    left:90px;
+    position: absolute;
+}
+.box28{
+    bottom:60px;
+    left:30px;
+    position: absolute;
+}
+.box29{
+    bottom:90px;
+    left:30px;
+    position: absolute;
+}

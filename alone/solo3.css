@@ -1,0 +1,209 @@
+/* 컨테이너 대분류 */
+.container{
+    width: 1500px;
+    height: 3000px;
+    background-color: beige;
+    flex-direction: row;
+}
+/* container1,3 */
+.containertop{
+    display:flex;
+
+}
+/* container2,4 */
+.containerbottom{
+    display:flex;
+
+}
+/* container5,6 */
+.containerbottom2{
+    display:flex;
+}
+.container1{
+    width:500px;
+    height:450px;
+    background-color: black;
+    color:white;
+    padding-left:30px;
+    padding-right:20px;
+}
+.container2{
+    width: 500px;
+    height:450px;
+    background-color: rgb(221, 215, 215);
+    padding-left:30px;
+    padding-right:20px;
+    font-family: sans-serif;
+}
+.container3{
+    width: 500px;
+    height:300px;
+    background-color: black;
+    color:white;
+    padding-left:30px;
+    padding-right:20px;
+}
+.container4{
+    width: 500px;
+    height:300px;
+    background-color: rgb(238, 182, 118);
+    padding-left:30px;
+    padding-right:20px;
+}
+.container5{
+    width:500px;
+    height:700px;
+    background-color: rgb(221, 215, 215);
+    padding-left:30px;
+    padding-right:20px;
+}
+.container6{
+    width:500px;
+    height:700px;
+    background-color: rgb(221, 215, 215);
+    padding-left:30px;
+    padding-right:20px;
+}
+.text1{
+    font-size:30px;
+    font-weight:bold;
+}
+.text2{
+    font-size:25px;
+    font-weight:bold;
+}
+.text3{
+    text-align: center;
+}
+.margin{
+    margin-top:50px;
+}
+/* img 크기 조절 */
+.img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.box1{
+    margin-top:  10px;
+}
+.box2{
+    margin-top: 30px;
+}
+.box3{
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-between;
+}
+.box4{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box6{
+    margin-top:10px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+.box7{
+    margin-top:10px;
+    display: flex;
+    justify-content: space-between;
+}
+.box8{
+    text-align: right;
+}
+.box9{
+    display:flex;
+    justify-content: space-between;
+}
+.box10{
+    position:absolute;
+    display:flex;
+    align-content: center;
+    right:250px;
+    bottom:-30px;
+}
+.box11{
+    margin-top:40px;
+    margin-left:10px;
+    margin-right:10px;
+    font-size:large;
+    font-weight: bold;
+}
+.box12{
+    margin-top:30px;
+    width:300px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: rgb(48, 47, 47);
+    color:white;
+}
+.box13{
+    margin-top:5px;
+    margin-left:5px;
+    font-size: 13px;
+}
+/* container5 제목 */
+.box14{
+    margin-top:10px;
+    font-size:25px;
+    font-weight: bolder;
+}
+/* container6 제목 */
+.box15{
+    margin-top:130px;
+    font-size:25px;
+    font-weight: bolder;
+}
+/* 이미지 파일 우측 정렬 */
+.img1{
+    text-align: right;
+}
+/* 이미지 파일 위치 조정 */
+.img2{
+    position:absolute;
+    left:400px;
+}
+.img3{
+    position:absolute;
+    left:320px;
+}
+.img4{
+    position:absolute;
+    left:240px;
+}
+.img5{
+    margin-left:70px;
+}
+.img6{
+    width:270px;
+    height:220px;
+    border-radius: 50%;
+    position:absolute;
+    bottom:180px;
+}
+.img7{
+    position:absolute;
+    right:300px;
+    bottom:350px;
+}
+.img8{
+    position:absolute;
+    right:300px;
+    bottom:270px;
+}
+.img9{
+    position:absolute;
+    right:300px;
+    bottom:190px;
+}
