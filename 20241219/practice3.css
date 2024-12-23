@@ -1,5 +1,6 @@
 body{
     background-color: rgb(213, 194, 231);
+    font-family: "Dongle", serif;
     /* 배경 */
 }
 .box1{
@@ -9,30 +10,46 @@ body{
     align-items: center;
     /* 세로로 중앙에 정렬 */
     flex-direction: column;
+    /* 텍스트 왼쪽 정렬 */
+    text-align: left;
 }
 .box2{
     display: flex;
     width: 600px;
-    height: 200px;
+    height: 120px;
     line-height: 100px;
     background-color: white;
     border:1px ;
     padding-left:20px;
     border-radius:8px;
     border-top:6px solid purple;
+    /* google font kirang Haerang */
+    font-family:"Dongle", serif;
+    font-size:80px;
 }
 .box3{
+    font-family: "Dongle", serif;
+    font-size:23px;
     width: 600px;
-    height: 100px;
+    height: 120px;
     border-radius:8px;
     border-left:6px solid purple;
     padding-left: 30px;
     background-color: white;
     
 }
+input[type="text"]{
+    font-family: "Dongle", serif;
+    font-size:20px;
+    text-align: center;
+    height:23px;
+    margin-left:30px;
+}
 .box4{
+    font-family: "Dongle", serif;
+    font-size:23px;
     width: 600px;
-    height: 150px;
+    height: 200px;
     border:1px ;
     border-radius: 8px;
     border-left:6px solid purple;
@@ -41,13 +58,57 @@ body{
     background-color: white;
 }
 .box5{
+    margin-top:10px;
+    width: 600px;
+    height: 200px;
+    border-left:6px solid purple;
+    background-color: white;
+    border-radius: 8px;
+    padding-right:15px;
+    padding-left:15px;
+    font-size:23px;    
+}
+textarea{
     width: 600px;
     height: 150px;
-    border:1px solid black;
+    padding-left: 30px;
+    border-radius: 8px;
+    border-left:6px solid purple;
+    border-right:1px;
+    border-top:1px;
+    border-bottom:1px;
     background-color: white;
+    font-family: "Dongle", serif;
+    font-size:23px;
 }
+textarea:active{
+    border:none;
+    border-left:6px solid purple;
+}
+/* input 위치 조정 */
 .input{
     border-radius:100px;
     background-color: rgb(208, 191, 224);
     border:1px;
+}
+input[type="button"]{
+    font-family: "Dongle", serif;
+    width:70px;
+    height:30px;
+    font-size:23px;
+    margin-bottom:20px;
+    border-radius:20px;
+    border:2px bold purple;
+}
+input[type="button"]:hover{
+    background-color: purple;
+}
+.box6{
+    width: 600px;
+}
+select{
+    font-family: "Dongle", serif;
+    font-size:20px;
+    border-radius:8px;
+    border:none;
 }
