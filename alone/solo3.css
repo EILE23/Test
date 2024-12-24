@@ -1,19 +1,22 @@
+body{
+    font-family: "Diphylleia", serif;
+}
 /* 컨테이너 대분류 */
 .container{
     width: 1500px;
-    height: 3000px;
+    height: 2000px;
     background-color: beige;
-    flex-direction: row;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* container1,3 */
 .containertop{
     display:flex;
-
 }
 /* container2,4 */
 .containerbottom{
     display:flex;
-
 }
 /* container5,6 */
 .containerbottom2{
@@ -24,45 +27,49 @@
     height:450px;
     background-color: black;
     color:white;
-    padding-left:30px;
-    padding-right:20px;
+    padding-left:50px;
+    padding-right:50px;
 }
 .container2{
     width: 500px;
     height:450px;
     background-color: rgb(221, 215, 215);
-    padding-left:30px;
-    padding-right:20px;
     font-family: sans-serif;
+    position: relative;
+    padding-left:50px;
+    padding-right:50px;
 }
 .container3{
     width: 500px;
     height:300px;
     background-color: black;
     color:white;
-    padding-left:30px;
-    padding-right:20px;
+    padding-left:50px;
+    padding-right:50px;
+    position: relative;
 }
 .container4{
     width: 500px;
     height:300px;
     background-color: rgb(238, 182, 118);
-    padding-left:30px;
-    padding-right:20px;
+    position: relative;
+    padding-left:50px;
+    padding-right:50px;
 }
 .container5{
     width:500px;
-    height:700px;
+    height:800px;
     background-color: rgb(221, 215, 215);
-    padding-left:30px;
-    padding-right:20px;
+    padding-left:50px;
+    padding-right:50px;
+
 }
 .container6{
     width:500px;
-    height:700px;
+    height:800px;
     background-color: rgb(221, 215, 215);
-    padding-left:30px;
-    padding-right:20px;
+    padding-left:50px;
+    padding-right:50px;
 }
 .text1{
     font-size:30px;
@@ -107,9 +114,6 @@
 }
 .box6{
     margin-top:10px;
-    display: flex;
-    flex-direction: center;
-    align-items: center;
 }
 .box7{
     margin-top:10px;
@@ -126,9 +130,10 @@
 .box10{
     position:absolute;
     display:flex;
+    flex-direction: row;
     align-content: center;
-    right:250px;
-    bottom:-30px;
+    right:10px;
+    bottom:100px;
 }
 .box11{
     margin-top:40px;
@@ -165,6 +170,58 @@
     font-size:25px;
     font-weight: bolder;
 }
+.box16{
+    margin-top:20px;
+    display:flex;
+    flex-direction: row;
+}
+.box17{
+    margin-left:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box18{
+    margin-left:30px;
+    margin-top: 15px;
+    display:flex;
+    align-items: center;
+}
+.box19{
+    margin-left:30px;
+    flex-wrap:wrap;
+}
+.box20{
+    margin-top:60px;
+    font-size:25px;
+    font-weight: bolder;
+
+}
+.box21{
+    display:flex;
+    flex-direction: column;
+}
+.box22{
+    width:250px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:20px;
+    margin-left:8px;
+}
+.box24{
+    display:flex;
+    flex-direction: column;
+}
+.box25{
+    display:flex;
+    flex-direction:row;
+}
+.box26{
+    display: flex;
+    flex-direction: row;
+}
 /* 이미지 파일 우측 정렬 */
 .img1{
     text-align: right;
@@ -172,15 +229,16 @@
 /* 이미지 파일 위치 조정 */
 .img2{
     position:absolute;
-    left:400px;
+    margin-left:80px;
+    z-index:1;
 }
 .img3{
     position:absolute;
-    left:320px;
+    margin-left:160px;
+    z-index:2;
 }
 .img4{
     position:absolute;
-    left:240px;
 }
 .img5{
     margin-left:70px;
@@ -190,20 +248,34 @@
     height:220px;
     border-radius: 50%;
     position:absolute;
-    bottom:180px;
+    bottom:-10px;
 }
 .img7{
     position:absolute;
-    right:300px;
-    bottom:350px;
+    right:20px;
+    bottom:50px;
 }
 .img8{
     position:absolute;
-    right:300px;
-    bottom:270px;
+    right:20px;
+    bottom:130px;
 }
 .img9{
     position:absolute;
-    right:300px;
-    bottom:190px;
+    right:20px;
+    bottom:200px;
+}
+.img10{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+}
+.img11{
+    width:300px;
+    height:300px;
+    position:absolute;
+    right:200px;
+}
+.imgbox2{
+    margin-left:10px;
 }
