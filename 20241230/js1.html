@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        const age = prompt("나이를 입력하세요.");
+        const gen = prompt("성별을 입력하세요.");
+        
+        if ( age >= 20){
+            if ( gen === "남자") {
+                console.log("성인 남자")
+            }
+            else if ( gen === "여자") {
+                console.log("성인 여자")
+            }
+            console.log("성인") 
+        }
+        else if ( age >= 17) {
+            if ( gen === "남자") {
+                console.log("고등학생 남자")
+                age = 500;
+            }
+            else if ( gen === "여자") {
+                console.log("고등학생 여자")
+                age = 500;
+            }
+            console.log("고등학생")
+        }
+        else if ( age >= 14) {
+
+            if ( gen === "남자") {
+                console.log("중학생 남자")
+                age = 500;
+            }
+            else if ( gen === "여자") {
+                console.log("중학생 여자")
+                age = 500;
+            }
+            console.log("중학생")
+        }
+        else if ( age >= 8) {
+            if ( gen === "남자") {
+                console.log("초등학생 남자")
+                age = 500;
+            }
+            else if ( gen === "여자") {
+                console.log("초등학생 여자")
+                age = 500;
+            }
+            console.log("초등학생")
+        }
+        else if ( age >= 0, age != 500 ) {
+
+            if ( gen === "남자") {
+                console.log("남자 아이")
+                age = 500;
+            }
+            else if ( gen === "여자") {
+                console.log("여자 아이")
+                age = 500;
+            }
+            console.log("유아")
+        }
+        else {
+        }
+
+    </script>
+<body>
+    
+</body>
+</html>
