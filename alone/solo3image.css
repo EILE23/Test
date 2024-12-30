@@ -1,0 +1,29 @@
+.container{
+    display:flex;
+    flex-direction:row;
+    font-family: "Diphylleia", serif;
+    justify-content: center;
+}
+.img{
+    width:250px;
+    height:255px;
+}
+.box1{
+    display:flex;
+    flex-direction: column;
+    border:6px solid brown;
+}
+.text{
+    margin-top:5px;
+    border:3px solid brown;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+}
+.box2{
+    width:300px;
+    height:300px;
+    border:6px solid brown;
+    font-size:15px;
+    font-weight:300px;
+}

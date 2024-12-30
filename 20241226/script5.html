@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // or || and && not !
+    const name = "뽀로로" ;
+    const age = 18;
+    const adult = age > 19; //false
+    //adult의 값 자체가 false지만 !연산자는 adult의 값을 참으로 인식 조건부에 adult의 값을 넣으면 조건 자체가 adult이 있을 때로 바뀜
+    //복잡함으로 이런식으로는 잘 쓰이지 않음.
+    const data = "";
+    //null의 값 자체는 not으로 인식 현재 data의 값이 null값이므로 !data = data가 있을 때로 되어버림 
+    // => data의 값이 있으면 else로 빠져나가게 됨
+
+    if(!!data){
+        console.log("돌아가");
+    }
+    else{
+        console.log("통과");
+    }
+    
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
