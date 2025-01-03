@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        #head{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        #head2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        #head3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .imgHead{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imgHead:hover{
+            background-color: rgb(235, 227, 227);
+            cursor: pointer;
+        }
+        .textHead{
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .textHead:hover{
+            cursor: pointer;
+            text-decoration : underline;
+        }
+        .empty{
+            height: 130px;
+        }
+        #imgHead1{
+            width : 25px;
+            height: 25px;
+        }
+        #imgHead2{
+            height: 100px;
+        }
+        .textarea{
+            margin-top: 30px;
+            height: 55px;
+            width: 800px;
+            border-radius: 25px;
+            resize : none;
+            border : 1px rgb(255, 255, 255) solid;
+            box-shadow: 1px 1px 1px 1px #d8d6d6;
+            display:flex;
+            align-items: center;
+            margin-bottom: 25px;
+            
+        }
+        .textarea1{
+            border: none;
+            resize: none;
+            height:20px;
+            width: 700px;
+            outline: none;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            font-weight: 400;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .imgHead3{
+            margin-left: 10px;
+        }
+        .icon{
+            width:20px;
+            height:20px;
+            margin-right:20px;
+        }
+        .a{
+            width:100px;
+            height:100px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .a2{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: grey;
+            position: absolute;
+        }
+        .img2{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+<body>
+<div class = "container">
+    <div id = "head">
+        <div class="textHead">Gmail</div>
+        <div class="textHead">이미지</div>
+        <div class="imgHead"><img id = "imgHead1" src = "../20250103/image/potion.png" alt = "potion"/></div>
+        <div class="imgHead"><img id = "imgHead1" src = "../20250103/image/dot.png" alt = "potion"/></div>
+    </div>
+    <div id = "head3">
+        <div class="empty"></div>
+        <div class="imgHead2"><img id = "imgHead2" src = "../20250103/image/Google.png"/></div>
+        <div class="textarea">
+            <img class = "imgHead3 icon" src = "../20250103/image/dodbogi.png" alt = "dodbogi" />
+            <textarea placeholder = "Google 검색 또는 URL 입력" class = "textarea1"></textarea>
+            <img class = "icon" src = "../20250103/image/mic.png" alt = "dodbogi" />
+            <img class = "icon" src = "../20250103/image/camera.png" alt = "dodbogi" />
+        </div>
+        <div class="a"><div class="a2"><img class = "img2" src="../20250103/image/youtube.png" alt = "youtube"/></div</div>
+    </div>
+</div>
+</body>
+</html>
