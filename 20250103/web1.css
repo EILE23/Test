@@ -1,0 +1,30 @@
+
+.menu2{
+    max-width:1280px;
+    background-color: skyblue;
+    gap : 10px;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+}
+@media screen and (max-width:768px){
+    .menu2{
+        max-width:1280px;
+        max-height:300px;
+        width:100%;
+        height: 100%;
+        background-color: skyblue;
+        margin:0px , auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap : 0px;
+    }
+    .menu1{
+        width:100%;
+        height:100%;
+        background-color: rgb(195, 228, 241);
+    }
+}

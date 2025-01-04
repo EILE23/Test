@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel = "stylesheet" href = "jsPractice.js" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -15,6 +16,8 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
+            max-height: 1280px;
+            height:100%;
         }
         #head2{
             display: flex;
@@ -29,8 +32,8 @@
             justify-content: center;
         }
         .imgHead{
-            width:50px;
-            height:50px;
+            width:45px;
+            height:45px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -39,6 +42,9 @@
         .imgHead:hover{
             background-color: rgb(235, 227, 227);
             cursor: pointer;
+        }
+        .imgHead:active .dropdown-menu{
+            display: flex;
         }
         .textHead{
             width: 50px;
@@ -80,7 +86,8 @@
             border: none;
             resize: none;
             height:20px;
-            width: 700px;
+            max-width:1280px;
+            width: 100%;
             outline: none;
             overflow-x: hidden;
             overflow-y: hidden;
@@ -97,44 +104,118 @@
             height:20px;
             margin-right:20px;
         }
+        .icon:hover{
+            cursor: pointer;
+        }
+        .ab{
+            display: flex;
+            flex-direction: row;
+            gap : 20px;
+        }
         .a{
             width:100px;
             height:100px;
             border-radius: 8px;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .a2{
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background-color: grey;
-            position: absolute;
+            background-color: rgb(243, 237, 237);
         }
         .img2{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .a:hover{
+            background-color: grey;
+            cursor: pointer;
+        }
+        .dropdown{
+            position:relative;
+        }
+        .dropdown-menu{
+            display:none;
             position: absolute;
-            height: 100px;
-            width: 100px;
+            top : 100%;
+            right: 0;
+            background-color: grey;
+            width : 300px;
+            height : 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .dropdown-menu2{
+            background-color: white;
+            width : 280px;
+            height: 480px;
+            border-radius: 24px;
+            display: flex;
+            justify-content: flex-start;
+            justify-content: center;
+            align-content: center;
+        }
+        .dropdown-menu3{
+            background-color: red;
+            width : 240px;
+            height: 440px;
+            max-height: 440px;
+            border-radius: 24px;
         }
     </style>
 <body>
 <div class = "container">
     <div id = "head">
-        <div class="textHead">Gmail</div>
-        <div class="textHead">이미지</div>
-        <div class="imgHead"><img id = "imgHead1" src = "../20250103/image/potion.png" alt = "potion"/></div>
-        <div class="imgHead"><img id = "imgHead1" src = "../20250103/image/dot.png" alt = "potion"/></div>
+        <div onclick = "gmail()" class="textHead">Gmail</div>
+        <div onclick = "image()" class="textHead">이미지</div>
+        <div onclick = "searchlabs()" class="imgHead"><img class = "imghead4" src = "../20250103/image/potion.png" alt = "potion"/></div>
+            <div class="imgHead dropdown"><div><img class = "imgHead4" id = "imgHead1" src = "../20250103/image/dot.png" alt = "dot"/>
+                 </div>
+        <div class="dropdown-menu">
+            <div class="dropdown-menu2">
+                <div class = "dropdown-menu3">
+                    <div>1</div>
+                    <div>1</div>
+                </div>
+            </div>
+            <div class="dropdown-menu4">
+                <div class = "dropdown-menu3">
+                    <div>1</div>
+                    <div>1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
     </div>
     <div id = "head3">
         <div class="empty"></div>
         <div class="imgHead2"><img id = "imgHead2" src = "../20250103/image/Google.png"/></div>
         <div class="textarea">
-            <img class = "imgHead3 icon" src = "../20250103/image/dodbogi.png" alt = "dodbogi" />
-            <textarea placeholder = "Google 검색 또는 URL 입력" class = "textarea1"></textarea>
-            <img class = "icon" src = "../20250103/image/mic.png" alt = "dodbogi" />
-            <img class = "icon" src = "../20250103/image/camera.png" alt = "dodbogi" />
+            <img class = "imgHead3" src = "../20250103/image/dodbogi.png" alt = "dodbogi" />
+            <textarea wrap = "off" placeholder = "Google 검색 또는 URL 입력" class = "textarea1"></textarea>
+            <img class = "imgHead3 icon" onclick = "icon1()" src = "../20250103/image/dodbogi.png" alt = "dodbogi" />
+            <img class = "icon" onclick = "mic()" src = "../20250103/image/mic.png" alt = "mic" />
+            <img class = "icon" onclick = "camera()" src = "../20250103/image/camera.png" alt = "camera" />
         </div>
-        <div class="a"><div class="a2"><img class = "img2" src="../20250103/image/youtube.png" alt = "youtube"/></div</div>
+        <div class="ab">
+        <div class="a" onclick = "input1()"><div class="a2"><img class = "img2" src="../20250103/image/youtube.png" alt = "youtube"/></div>youtube</div>
+        <div class="a" onclick = "input2()"><div class="a2"><img class = "img2" src="../20250103/image/google.2.png" alt = "google"/></div>Google</div>
+        <div class="a" onclick = "input3()"><div class="a2"><img class = "img2" src="../20250103/image/chrome.png" alt = "youtube"/></div>웹 스토어</div>
+        <div class="a" onclick = "input4()"><div class="a2"><img class = "img2" src="../20250103/image/plus.png" alt = "바로가기"/></div>바로가기</div>
+        </div>
     </div>
 </div>
+<script src = "jsPractice.js"></script>
 </body>
+
 </html>
