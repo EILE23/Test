@@ -29,10 +29,28 @@ function camera(){
     alert("카메라 기능입니다.")
 }
     
-// 드롭다운 메뉴 활성화 시 스크롤을 최상단으로 설정
 const dropdown = document.querySelector('.dropdown');
 const dropdownMenu = document.querySelector('#dropdownMenu');
 
 dropdown.addEventListener('mouseenter', () => {
-dropdownMenu.scrollTop = 0; // 스크롤을 최상단으로 이동
+dropdownMenu.scrollTop = 0; 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggle = document.querySelector(".dropdown");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownToggle.addEventListener("click", function(event) {
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        event.stopPropagation(); 
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!dropdownToggle.contains(event.target)) {
+            dropdownMenu.style.display = "none"; 
+        }
+    });
+});
+function dropclick(app){
+    alert(`${app} 기능 입니다.`)
+}

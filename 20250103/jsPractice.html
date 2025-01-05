@@ -1,198 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet" href = "jsPractice.js" />
+    <link rel = "stylesheet" href = "jsPractices.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-    <style>
-        .container{
-            display: flex;
-            flex-direction: column;
-        }
-        #head{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-end;
-            max-height: 1280px;
-            height:100%;
-        }
-        #head2{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        #head3{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .imgHead{
-            width:45px;
-            height:45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .imgHead:hover{
-            background-color: rgb(235, 227, 227);
-            cursor: pointer;
-        }
-        .imgHead:active .dropdown-menu{
-            display: flex;
-        }
-        .textHead{
-            width: 50px;
-            height: 50px;
-            margin: 3px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .textHead:hover{
-            cursor: pointer;
-            text-decoration : underline;
-        }
-        .empty{
-            height: 130px;
-        }
-        #imgHead1{
-            width : 25px;
-            height: 25px;
-        }
-        #imgHead2{
-            height: 100px;
-        }
-        .textarea{
-            margin-top: 30px;
-            height: 55px;
-            width: 800px;
-            border-radius: 25px;
-            resize : none;
-            border : 1px rgb(255, 255, 255) solid;
-            box-shadow: 1px 1px 1px 1px #d8d6d6;
-            display:flex;
-            align-items: center;
-            margin-bottom: 25px;
-            
-        }
-        .textarea1{
-            border: none;
-            resize: none;
-            height:20px;
-            max-width:1280px;
-            width: 100%;
-            outline: none;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            font-weight: 400;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-        }
-        .imgHead3{
-            margin-left: 10px;
-        }
-        .icon{
-            width:20px;
-            height:20px;
-            margin-right:20px;
-        }
-        .icon:hover{
-            cursor: pointer;
-        }
-        .ab{
-            display: flex;
-            flex-direction: row;
-            gap : 20px;
-        }
-        .a{
-            width:100px;
-            height:100px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .a2{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgb(243, 237, 237);
-        }
-        .img2{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-        }
-        .a:hover{
-            background-color: grey;
-            cursor: pointer;
-        }
-        .dropdown{
-            position:relative;
-        }
-        .dropdown-menu{
-            display:none;
-            position: absolute;
-            top : 100%;
-            right: 0;
-            background-color: grey;
-            width : 300px;
-            height : 500px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 24px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow-y: auto;
-        }
-        .dropdown-menu2{
-            background-color: white;
-            width : 280px;
-            height: 480px;
-            border-radius: 24px;
-            display: flex;
-            justify-content: flex-start;
-            justify-content: center;
-            align-content: center;
-        }
-        .dropdown-menu3{
-            background-color: red;
-            width : 240px;
-            height: 440px;
-            max-height: 440px;
-            border-radius: 24px;
-        }
-    </style>
 <body>
 <div class = "container">
     <div id = "head">
         <div onclick = "gmail()" class="textHead">Gmail</div>
         <div onclick = "image()" class="textHead">이미지</div>
         <div onclick = "searchlabs()" class="imgHead"><img class = "imghead4" src = "../20250103/image/potion.png" alt = "potion"/></div>
-            <div class="imgHead dropdown"><div><img class = "imgHead4" id = "imgHead1" src = "../20250103/image/dot.png" alt = "dot"/>
+            <div class="dropdown"><div class="imgHead"><img class = "imgHead4" id = "imgHead1" src = "../20250103/image/dot.png" alt = "dot"/>
                  </div>
-        <div class="dropdown-menu">
-            <div class="dropdown-menu2">
-                <div class = "dropdown-menu3">
-                    <div>1</div>
-                    <div>1</div>
-                </div>
-            </div>
-            <div class="dropdown-menu4">
-                <div class = "dropdown-menu3">
-                    <div>1</div>
-                    <div>1</div>
-                </div>
-            </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu2">
+                        <div onclick = "dropclick('계정')" class = "dropdown-item"><div class="icon2"><div class ="icon3"><div class="id">계정</div></div>계정</div></div>
+                        <div onclick = "dropclick('검색')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/search.png" alt="search"/><div>검색</div></div></div>
+                        <div onclick = "dropclick('지도')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/maps.png" alt="map"/><div>지도</div></div></div>
+                        <div onclick = "dropclick('Gemini')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Gemini.png" alt="gemini"/><div>Gemini</div></div></div>
+                        <div onclick = "dropclick('뉴스')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/news.png" alt="news"/><div>뉴스</div></div></div>
+                        <div onclick = "dropclick('Gamil')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/gmail2.png" alt="map"/><div>Gmail</div></div></div>
+                        <div onclick = "dropclick('Youtube')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/youtube2.png" alt="youtube"/><div>Youtube</div></div></div>
+                        <div onclick = "dropclick('Meet')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/meet.png" alt="search"/><div>Meet</div></div></div>
+                        <div onclick = "dropclick('채팅')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/chat.png" alt="chat"/><div>채팅</div></div></div>
+                        <div onclick = "dropclick('주소록')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/address.png" alt="adress"/><div>주소록</div></div></div>
+                        <div onclick = "dropclick('드라이브')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/drive.png" alt="drive"/><div>드라이브</div></div></div>
+                        <div onclick = "dropclick('Calendar')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/calender.png" alt="calendar"/><div>Calendar</div></div></div>
+                        <div onclick = "dropclick('Play')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/play.png" alt="play"/><div>Play</div></div></div>
+                        <div onclick = "dropclick('번역')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/search.png" alt="search"/><div>번역</div></div></div>
+                        <div onclick = "dropclick('사진')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/photo.png" alt="map"/><div>사진</div></div></div>
+                        <div onclick = "dropclick('내 광고 센터')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Advertising.png" alt="ad"/><div class="text">내 광고 센터</div></div></div>
+                        <div onclick = "dropclick('쇼핑')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/shoping.png" alt="shopping"/><div>쇼핑</div></div></div>
+                    </div>
+                    <div class="dropdown-menu3">
+                        <div onclick = "dropclick('Docs')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Docs.png" alt="Docs"/><div>Docs</div></div></div>
+                        <div onclick = "dropclick('금융')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/finance.png" alt="finance"/><div>금융</div></div></div>
+                        <div onclick = "dropclick('Sheets')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Sheet.png" alt="sheet"/><div>Sheets</div></div></div>
+                        <div onclick = "dropclick('Slides')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/slides.png" alt="slides"/><div>Slides</div></div></div>
+                        <div onclick = "dropclick('도서')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/book.png" alt="search"/><div>도서</div></div></div>
+                        <div onclick = "dropclick('Blogger')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Bloger.png" alt="map"/><div>Blogger</div></div></div>
+                        <div onclick = "dropclick('Keep')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Keep.png" alt="search"/><div>Keep</div></div></div>
+                        <div onclick = "dropclick('클래스룸')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Classroom.png" alt="search"/><div>클래스룸</div></div></div>
+                        <div onclick = "dropclick('어스')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Earth.png" alt="map"/><div>어스</div></div></div>
+                        <div onclick = "dropclick('저장됨')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/savesave.png" alt="search"/><div>저장됨</div></div></div>
+                        <div onclick = "dropclick('아트 앤 컬쳐')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/artandculture.png" alt="search"/><div class="text">아트 앤 컬쳐</div></div></div>
+                        <div onclick = "dropclick('Google ads')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Googleads.png" alt="ad"/><div>Google ads</div></div></div>
+                        <div onclick = "dropclick('Marchant center')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Merchantcenter.png" alt="search"/><div class="text">Merchant center</div></div></div>
+                        <div onclick = "dropclick('Google one')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/one.png" alt="one"/><div class="text">Google One</div></div></div>
+                        <div onclick = "dropclick('여행')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Travel.png" alt="map"/><div>여행</div></div></div>
+                        <div onclick = "dropclick('Form')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/Froms.png" alt="search"/><div>Form</div></div></div>
+                        <div onclick = "dropclick('Google store')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/googlestore.png" alt="search"/><div class="text">Google store</div></div></div>
+                        <div onclick = "dropclick('Chrome 웹 스토어')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/chromewebstore.png" alt="map"/><div class="text">Chrome 웹 스토어</div></div></div>
+                        <div onclick = "dropclick('비밀번호 관리자')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/passwordadmin.png" alt="search"/><div class="text">비밀번호 관리자</div></div></div>
+                        <div onclick = "dropclick('Google 애널리틱스')" class = "dropdown-item"><div class="icon2"><img src="../20250103/googleicon/googleener.png" alt="search"/><div class="text">Google 애널리틱스</div></div></div>
+                    </div>
         </div>
     </div>
 </div> 

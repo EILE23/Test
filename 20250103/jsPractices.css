@@ -1,0 +1,223 @@
+body{
+    font-size: 12px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    max-height: 1280px;
+    height:100%;
+}
+#head2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#head3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imgHead{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgHead:hover{
+    background-color: rgb(235, 227, 227);
+    cursor: pointer;
+}
+.imgHead:active .dropdown-menu{
+    display: flex;
+}
+.textHead{
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textHead:hover{
+    cursor: pointer;
+    text-decoration : underline;
+}
+.empty{
+    height: 130px;
+}
+#imgHead1{
+    width : 25px;
+    height: 25px;
+}
+#imgHead2{
+    height: 100px;
+}
+.textarea{
+    margin-top: 30px;
+    height: 55px;
+    width: 800px;
+    border-radius: 25px;
+    resize : none;
+    border : 1px rgb(255, 255, 255) solid;
+    box-shadow: 1px 1px 1px 1px #d8d6d6;
+    display:flex;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+.textarea1{
+    border: none;
+    resize: none;
+    height:20px;
+    max-width:1280px;
+    width: 100%;
+    outline: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.imgHead3{
+    margin-left: 10px;
+}
+.icon{
+    width:20px;
+    height:20px;
+    margin-right:20px;
+}
+.icon2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.icon3{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-size: 40px;
+}
+.id{
+    position: absolute;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.ab{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+}
+.a{
+    width:100px;
+    height:100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.a2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(243, 237, 237);
+}
+.img2{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.a:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-item{
+    padding: 10px;
+    max-width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 16px;    
+}
+.text{
+    max-width:70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.dropdown-item:hover{
+    background-color: #ddd;
+}
+.dropdown-item:hover .text{
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+}
+.dropdown-menu{
+    display:none;
+    position: absolute;
+    z-index: 10;
+    top : 100%;
+    right: 0;
+    background-color: #c9d6ed;
+    width : 380px;
+    height : 500px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 24px;
+    overflow-y: auto;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.dropdown-menu2{
+    height: 700px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+}
+.dropdown-menu3{
+    height: 900px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+}
