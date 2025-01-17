@@ -1,0 +1,101 @@
+/* 메인 컨테이너 */
+.main-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(120deg, #f0f8ff, #e6e6fa);
+  min-height: 100vh;
+}
+
+/* 테이블 스타일 */
+.tablewrap {
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 20px;
+  white-space: nowrap;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tablewrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tablewrap th,
+.tablewrap td {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.tablewrap th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.tablewrap tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tablewrap tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1000px) {
+  .tablewrap {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tablewrap {
+    font-size: 16px;
+  }
+  .lastwrap {
+    font-size: 12px;
+  }
+}
+
+/* 정보 섹션 */
+.lastwrap {
+  white-space: nowrap;
+  margin-top: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  border: solid 1px #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fffaf0;
+  color: #333;
+  max-width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lastwrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 모바일 스타일 */
+@media screen and (max-width: 600px) {
+  .tablewrap {
+    font-size: 14px;
+  }
+  .lastwrap {
+    font-size: 10px;
+    padding: 15px;
+  }
+}
