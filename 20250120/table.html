@@ -10,13 +10,21 @@
     <div class="input-wrap">
       <!-- 아이디는 숫자 중복 불가 -->
       <div class="input-id-box">
-        <input class="input-id" placeholder="아이디를 입력해 주세요" />
+        <input
+          onkeyup="textprint('id'),textprint1()"
+          class="input-id"
+          placeholder="아이디를 입력해 주세요"
+        />
         <p class="id-text none"></p>
       </div>
 
       <!-- 이름 중복 가능 -->
       <div class="input-name-box">
-        <input class="input-name" placeholder="이름을 입력해 주세요" />
+        <input
+          onkeyup="textprint('name'),textprint1()"
+          class="input-name"
+          placeholder="이름을 입력해 주세요"
+        />
         <p class="name-text none"></p>
       </div>
 
@@ -25,6 +33,7 @@
         <input
           type="number"
           class="input-age"
+          onkeyup="textprint('age'),textprint1()"
           placeholder="나이를 입력해 주세요"
         />
         <p class="age-text none"></p>
@@ -32,16 +41,24 @@
 
       <!-- 경력사항 최소 15자리 이상 -->
       <div class="input-history-box">
-        <input class="input-history" placeholder="경력을 입력해 주세요" />
+        <input
+          onkeyup="textprint('history'),textprint1()"
+          class="input-history"
+          placeholder="경력을 입력해 주세요"
+        />
         <p class="history-text none"></p>
       </div>
 
       <!-- 별명 최소 2자리 이상 중복 불가 -->
       <div class="input-nickName-box">
-        <input class="input-nickName" placeholder="별명을 입력해 주세요" />
+        <input
+          onkeyup="textprint('nickName'),textprint1()"
+          class="input-nickName"
+          placeholder="별명을 입력해 주세요"
+        />
         <p class="nickName-text none"></p>
       </div>
-      <button onclick="savedata()">저장</button>
+      <button class="buttonc" disabled onclick="savedata()">저장</button>
       <!-- 저장 버튼을 누르면 데이터에 값이 닮기고 localstorage에 값을 저장한 후에 테이블 생성되게끔 -->
     </div>
 
