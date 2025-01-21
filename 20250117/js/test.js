@@ -92,6 +92,66 @@ const data = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "안철수",
+    age: 19,
+    careers: [
+      {
+        title: "놀기",
+      },
+      {
+        title: "자전거타기",
+      },
+      {
+        title: "오렌지먹기",
+      },
+      {
+        title: "사과부시기",
+      },
+    ],
+    nickName: [
+      {
+        name: "김영희",
+      },
+      {
+        name: "야생사자야생사자야생사자야생사자야생사자야생사자",
+      },
+      {
+        name: "오올이",
+      },
+    ],
+  },
+  {
+    id: 99,
+    name: "나영희",
+    age: 63,
+    careers: [
+      {
+        title: "놀기",
+      },
+      {
+        title: "자전거타기",
+      },
+      {
+        title: "오렌지먹기",
+      },
+      {
+        title: "사과부시기",
+      },
+    ],
+    nickName: [
+      {
+        name: "김영희",
+      },
+      {
+        name: "야생사자",
+      },
+      {
+        name: "오올이",
+      },
+    ],
+  },
 ];
 function nameclick(item) {
   console.log(item);
@@ -110,7 +170,9 @@ function nameclick(item) {
       alert(`이 사람의 이름은 ${value.name} 이고 나이는 ${value.age}이고 ${
         20 < value.age ? "성인" : "미성년자"
       } 입니다.
-      취미는 ${careerbox}가 있고 별명은 ${nicknamebox}가 있습니다`);
+      취미는 ${careerbox.join(",")}가 있고 별명은 ${nicknamebox.join(
+        ","
+      )}가 있습니다`);
     }
   });
 }
@@ -133,10 +195,10 @@ function menucreative() {
 
   data.map((item) => {
     tablewrap.innerHTML += `
-    <tr>
-      <td onclick = nameclick(${item.id})>${item.name}</td><td>${
-      item.age
-    }</td><td>${item.careers.map((value) => value.title).join("<br>")}</td>
+    <tr onclick = nameclick(${item.id})>
+      <td>${item.name}</td><td>${item.age}</td><td>${item.careers
+      .map((value) => value.title)
+      .join("<br>")}</td>
     <td>${item.nickName.map((value) => value.name).join("<br>")}
     </td>
     </tr>`;
@@ -152,7 +214,7 @@ function menucreative() {
         .map((value) => value.name)
         .join(",")}입니다 </div>`;
     }
-    if (item.age > 20) {
+    if (item.age >= 20) {
       lastwrap.innerHTML += `<div>${
         item.name
       }씨는 성인이고 취미는 ${item.careers
