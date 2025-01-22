@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
   <head>
-    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="../datahyeong/table.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -11,7 +11,7 @@
       <!-- 아이디는 숫자 중복 불가 -->
       <div class="input-id-box">
         <input
-          onkeyup="textprint('id'),textprint1()"
+          oninput="textprint('id'),textprint1()"
           class="input-id"
           placeholder="아이디를 입력해 주세요"
         />
@@ -21,7 +21,7 @@
       <!-- 이름 중복 가능 -->
       <div class="input-name-box">
         <input
-          onkeyup="textprint('name'),textprint1()"
+          oninput="textprint('name'),textprint1()"
           class="input-name"
           placeholder="이름을 입력해 주세요"
         />
@@ -33,7 +33,7 @@
         <input
           type="number"
           class="input-age"
-          onkeyup="textprint('age'),textprint1()"
+          oninput="textprint('age'),textprint1()"
           placeholder="나이를 입력해 주세요"
         />
         <p class="age-text none"></p>
@@ -42,7 +42,7 @@
       <!-- 경력사항 최소 15자리 이상 -->
       <div class="input-history-box">
         <input
-          onkeyup="textprint('history'),textprint1()"
+          oninput="textprint('history'),textprint1()"
           class="input-history"
           placeholder="경력을 입력해 주세요"
         />
@@ -52,7 +52,7 @@
       <!-- 별명 최소 2자리 이상 중복 불가 -->
       <div class="input-nickName-box">
         <input
-          onkeyup="textprint('nickName'),textprint1()"
+          oninput="textprint('nickName'),textprint1()"
           class="input-nickName"
           placeholder="별명을 입력해 주세요"
         />
@@ -63,6 +63,6 @@
     </div>
 
     <div class="main-wrap"></div>
-    <script src="../20250120/table.js"></script>
+    <script src="../datahyeong/table.js"></script>
   </body>
 </html>

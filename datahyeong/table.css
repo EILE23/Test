@@ -56,15 +56,14 @@
    수정된 입력창(수정 시)에 대한 스타일
 ======================== */
 .ininput {
-  width: 100% !important; /* 부모 요소의 너비에 맞게 꽉 차도록 설정 */
-  box-sizing: border-box !important; /* padding과 border가 포함되도록 설정 */
-  padding: 12px !important;
-  margin: 5px 0 !important;
-  border: 1px solid #333 !important;
-  border-radius: 6px !important;
-  font-size: 14px !important;
-  background-color: #fff !important;
-  transition: border-color 0.3s, box-shadow 0.3s !important;
+  max-width: 100% !important; /* 부모 요소의 너비에 맞게 꽉 차도록 설정 */
+  box-sizing: border-box; /* padding과 border가 포함되도록 설정 */
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
 }
 
 .ininput:focus {
@@ -107,7 +106,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
 /* 테이블 셀 스타일 */
 .tablewrap th,
 .tablewrap td {
@@ -122,6 +120,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 /* =======================
@@ -137,6 +136,7 @@
   font-size: 14px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .buttonb:hover {
