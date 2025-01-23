@@ -165,6 +165,11 @@
   width: 100%; /* 부모 요소의 너비에 맞게 확장 */
   font-weight: bold;
 }
+.img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+}
 .none {
   display: none;
 }

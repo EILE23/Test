@@ -1,10 +1,27 @@
 let saveData = JSON.parse(window.localStorage.getItem("data")) || [];
-
 // 넣으면 망함 문법 저장용
 const localdata = JSON.parse(window.localStorage.getItem("data"));
 console.log(saveData);
 const mainwrap = document.querySelector(".main-wrap");
-
+const imagearr = [
+  "../daiso/img.jpg",
+  "../daiso/img1.jpg",
+  "../daiso/img2.jpg",
+  "../daiso/img3.jpg",
+  "../daiso/img4.jpg",
+  "../daiso/img5.jpg",
+  "../daiso/img6.jpg",
+  "../daiso/img7.jpg",
+  "../daiso/img8.jpg",
+  "../daiso/img9.jpg",
+  "../daiso/img10.jpg",
+  "../daiso/img11.jpg",
+  "../daiso/img12.jpg",
+  "../daiso/img13.jpg",
+  "../daiso/img14.jpg",
+  "../daiso/img15.jpg",
+];
+let randomnum = 0;
 mainwrap.innerHTML = `<table border = "1" class="tablewrap">
       <tr>
       <th>아이디</th>
@@ -19,7 +36,7 @@ mainwrap.innerHTML = `<table border = "1" class="tablewrap">
 if (localdata) {
   createtable(localdata);
 }
-
+//<img class = "img" src = "${imagearr[randomnum]}" alt = "..."/>
 function createtable(content) {
   const mainwrap = document.querySelector(".main-wrap");
 
@@ -38,11 +55,12 @@ function createtable(content) {
     content.map((item) => {
       tablewrap.innerHTML += `
     <tr class = "tr${item.id}">
-    <td>${item.id}</td>
+    <td class = "id${item.id}">${item.id}<img class = "img" src = "${item.img}" alt = "..."/></td>
       <td class = "name${item.id}">${item.name}</td><td class = "age${item.id}">${item.age}</td><td class = "his${item.id}">${item.history}</td>
     <td>${item.nickname}
     </td><td><button class = "buttonb buttons${item.id}" onclick = "cor(${item.id})">수정</button><button class = "buttonb buttonr${item.id} none" onclick = "cord(${item.id})">수정완료</button><button class = "buttonb removebtn${item.id}"onclick = "remove(${item.id})">삭제</button></td>
     </tr>`;
+      document.querySelector(`.id${item.id}`).src;
     });
   } else content.innerHTML = "";
 }
@@ -99,25 +117,31 @@ function cord(item) {
   } else if (inage.value > 150) {
     alert("나이가 너무 많습니다");
     return;
-  } else if (inhis.value.length < 15) {
+  } else if (inhis.value.length <= 15) {
     alert("경력이 너무 짧습니다");
     return;
   }
 }
 // // // // // // // onclick 수정
 let buttonnumber = 0;
-function onlynumber(item) {
+function onlynumber(item, ptag) {
   const inage = document.querySelector(`.inage${item}`);
-  let dataid = "";
+  const inhis = document.querySelector(`.inhis${item}`);
+  if (ptag == "his") {
+    const phis = document.querySelector(`.phis${item}`);
+    if (inhis.value.length <= 15 && inhis.value.length >= 1) {
+      console.log(inhis.value);
 
-  if (!Number(inage.value)) {
-    localdata.map((cem) => {
-      if (cem.id == item) {
-        dataid = cem;
-      }
-    });
-    inage.value = `${dataid.age}`;
-    alert("숫자만 입력 가능합니다");
+      phis.textContent = "경력의 길이가 짧습니다";
+    } else if (inhis.value == "") phis.textContent = "";
+    else phis.textContent = "";
+  }
+  if (ptag == "age") {
+    const page = document.querySelector(`.page${item}`);
+    if (Number(inage.value) > 150) {
+      page.textContent = "나이가 너무 많습니다";
+    } else if (inage.value.trim() == "") page.textContent = "";
+    else page.textContent = "";
   }
 }
 function cor(item) {
@@ -137,8 +161,8 @@ function cor(item) {
   });
   console.log(dataid);
   tdname.innerHTML = `<input class = "ininput inname${item}"value = "${dataid.name}" )">`;
-  tdage.innerHTML = `<input type = "number" oninput = "onlynumber(${item})"class = "ininput inage${item}" value = "${dataid.age}")">`;
-  tdhis.innerHTML = `<input class = "ininput inhis${item}" value = "${dataid.history}")">`;
+  tdage.innerHTML = `<input type = "number" oninput = "onlynumber(${item},'age')" class = "ininput inage${item}" value = "${dataid.age}"><p class = "page${item}"></p>`;
+  tdhis.innerHTML = `<input class = "ininput inhis${item}" oninput = "onlynumber(${item}, 'his')" value = "${dataid.history}"><p class = "phis${item}"></p>`;
 }
 // onblur = "inputout(${item}
 let num = 0;
@@ -266,7 +290,6 @@ function textprint(item) {
   const NNickname = document.querySelector(".input-nickName").value;
 
   // const inputarr2 = [IID, NName, AAge, HHistory, NNickname];
-  let idcheck = true;
   if (isNaN(IID) && item == "id") {
     idtext.classList.remove("none");
     idtext.textContent = "아이디는 숫자만 가능합니다.";
@@ -340,12 +363,14 @@ function textprint(item) {
 
 function saveddata(inputID, inputName, inputAge, inputHistory, inputNickname) {
   // const saveData = window.localStorage.getItem("savedata");
+  randomnum = Math.floor(Math.random() * 16);
   const Datasave = {
     id: inputID,
     name: inputName,
     age: inputAge,
     history: inputHistory,
     nickname: inputNickname,
+    img: imagearr[randomnum],
   };
   saveData.push(Datasave);
   // const localdata = JSON.parse(window.localStorage.getItem("data"));
