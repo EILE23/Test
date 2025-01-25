@@ -1,8 +1,11 @@
-const saveData = JSON.parse(window.localStorage.getItem("shopping"));
+const saveData = JSON.parse(window.localStorage.getItem("data")) || [];
+const shopping = JSON.parse(window.localStorage.getItem("shopping"));
 
-createbox(saveData);
+createbox(shopping);
 
-let mnumber = saveData.length;
+// header
+
+let mnumber = shopping.length;
 console.log(mnumber);
 
 function createbox(data) {
@@ -14,17 +17,24 @@ function createbox(data) {
         <div><img class = "imgshop"src="${item.img}" alt="..." /></div>
         <div class="subbox">
           <div>${item.name}</div>
-          <div>${item.age}</div>
+          <div class = "price${item.id}">${item.age * item.cnt}</div>
+          <div class = "plusminus"><img onclick = "plus(${index})" class = "icon" src ="../daiso/addicon.png" alt = "..."/><span class ="sp${
+        item.id
+      }">${
+        item.cnt
+      }</span><img onclick = "minus(${index})"class = "icon" src ="../daiso/removeicon.png" alt = "..."/>
         </div>
-      <button class = "info" onclick = "information(${item.id})">정보</button><button class = "remove" onclick = "removeBtn(${index})">삭제</button></div>`;
+      <button class = "info" onclick = "information(${
+        item.id
+      })">정보</button><button class = "remove" onclick = "removeBtn(${index})">삭제</button></div>`;
     });
   } else mainwrap.innerHTML = `<div class = "tung">장바구니가 비었어요.</div>`;
 }
 
 function removeBtn(index) {
-  saveData.splice(index, 1);
+  shopping.splice(index, 1);
 
-  window.localStorage.setItem("shopping", JSON.stringify(saveData));
+  window.localStorage.setItem("shopping", JSON.stringify(shopping));
   //document.querySelector(`.box${saveData[index].id}`).remove();
 
   const Data = JSON.parse(window.localStorage.getItem("shopping"));
@@ -52,4 +62,34 @@ if (saveData.length >= 8) {
       header.classList.remove("fixed");
     }
   });
+}
+function plus(i) {
+  const spanText = document.querySelector(`.sp${shopping[i].id}`);
+  const divText = document.querySelector(`.price${shopping[i].id}`);
+  shopping[i].cnt++;
+  window.localStorage.setItem("shopping", JSON.stringify(shopping));
+  spanText.innerHTML = `${shopping[i].cnt}`;
+  divText.innerHTML = `${shopping[i].age * shopping[i].cnt}`;
+}
+function minus(i) {
+  if (shopping[i].cnt > 1) {
+    const spanText = document.querySelector(`.sp${shopping[i].id}`);
+    const divText = document.querySelector(`.price${shopping[i].id}`);
+    shopping[i].cnt--;
+    window.localStorage.setItem("shopping", JSON.stringify(shopping));
+    spanText.innerHTML = `${shopping[i].cnt}`;
+    divText.innerHTML = `${shopping[i].age * shopping[i].cnt}`;
+  } else return;
+}
+
+const dropdownmenu = document.querySelector(".dropdownmenu");
+dropdownmenu.innerHTML = `<li onclick="clickcate('all')">전체</li>`;
+
+let categorys = [...new Set(saveData.map((item) => item.category))];
+categorys.map((item) => {
+  dropdownmenu.innerHTML += `<li onclick="clickcate('${item}')">${item}</li>`;
+});
+
+function clickcate(value) {
+  window.location.href = `main.html?ct=${value}`;
 }

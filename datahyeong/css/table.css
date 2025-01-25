@@ -183,6 +183,7 @@
   padding: 0.2em 0.4em !important;
   gap: 50px;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .input-inbox {

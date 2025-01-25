@@ -98,11 +98,15 @@
 li {
   margin-top: 20px;
   white-space: nowrap;
+  padding: 5px;
 }
 li:hover {
   background-color: grey;
-  text-decoration: underline;
+  border-radius: 8px;
+  transform: scale(1.01);
+  cursor: pointer;
 }
 .dropdown:hover .dropdownmenu {
   display: block;
+  z-index: 10;
 }

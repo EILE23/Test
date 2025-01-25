@@ -384,5 +384,5 @@ function savedata() {
   }
 }
 function loocation() {
-  window.location.href = "main.html";
+  window.location.href = `main.html?ct=${"all"}`;
 }

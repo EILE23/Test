@@ -105,3 +105,22 @@
   font-size: 30px;
   font-weight: bold;
 }
+.icon {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+.icon:hover {
+  cursor: pointer;
+  background-color: #666;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 5px #ffffff;
+}
+.plusminus {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 60px;
+  right: 7%;
+}

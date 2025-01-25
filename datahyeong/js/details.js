@@ -1,9 +1,8 @@
-const saveData = JSON.parse(window.localStorage.getItem("data"));
+const saveData = JSON.parse(window.localStorage.getItem("data")) || [];
 let shoppingcart = JSON.parse(window.localStorage.getItem("shopping")) || [];
 const querydata = new URLSearchParams(window.location.search);
 const id = querydata.get("id");
 
-console.log(id);
 let iddata = "";
 if (saveData) {
   saveData.map((item) => {
@@ -84,4 +83,16 @@ if (saveData.length >= 8) {
       header.classList.remove("fixed");
     }
   });
+}
+
+const dropdownmenu = document.querySelector(".dropdownmenu");
+dropdownmenu.innerHTML = `<li onclick="clickcate('all')">전체</li>`;
+
+let categorys = [...new Set(saveData.map((item) => item.category))];
+categorys.map((item) => {
+  dropdownmenu.innerHTML += `<li onclick="clickcate('${item}')">${item}</li>`;
+});
+
+function clickcate(value) {
+  window.location.href = `main.html?ct=${value}`;
 }
