@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
+    <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/table.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+    <div class="header">
+      <div>관리 페이지</div>
+      <div>DAMOISO</div>
+      <div class="iconbox">
+        <button onclick="loocation()" class="upper">등록</button>
+        <!-- <img class="icon" src="../daiso/shoppingcart.png" alt="..." /> -->
+      </div>
+    </div>
     <div class="input-wrap">
       <!-- 아이디는 숫자 중복 불가 -->
       <div class="input-id-box">
@@ -34,7 +43,7 @@
           type="number"
           class="input-age"
           oninput="textprint('age'),textprint1()"
-          placeholder="나이를 입력해 주세요"
+          placeholder="가격을 입력해 주세요"
         />
         <p class="age-text none"></p>
       </div>
@@ -44,19 +53,35 @@
         <input
           oninput="textprint('history'),textprint1()"
           class="input-history"
-          placeholder="경력을 입력해 주세요"
+          placeholder="설명을 입력해 주세요"
         />
         <p class="history-text none"></p>
       </div>
 
       <!-- 별명 최소 2자리 이상 중복 불가 -->
-      <div class="input-nickName-box">
-        <input
-          oninput="textprint('nickName'),textprint1()"
-          class="input-nickName"
-          placeholder="별명을 입력해 주세요"
-        />
-        <p class="nickName-text none"></p>
+      <div class="input-box">
+        <div class="input-inbox">
+          <input
+            class="input-btn"
+            type="radio"
+            name="A"
+            value="A"
+            checked="checked"
+          />
+          <label>A</label>
+        </div>
+        <div class="input-inbox">
+          <input class="input-btn" type="radio" name="A" value="B" />
+          <label>B</label>
+        </div>
+        <div class="input-inbox">
+          <input class="input-btn" type="radio" name="A" value="C" />
+          <label>C</label>
+        </div>
+        <div class="input-inbox">
+          <input class="input-btn" type="radio" name="A" value="D" />
+          <label>D</label>
+        </div>
       </div>
       <button class="buttonc" disabled onclick="savedata()">저장</button>
       <!-- 저장 버튼을 누르면 데이터에 값이 닮기고 localstorage에 값을 저장한 후에 테이블 생성되게끔 -->

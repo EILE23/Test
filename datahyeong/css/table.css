@@ -56,14 +56,15 @@
    수정된 입력창(수정 시)에 대한 스타일
 ======================== */
 .ininput {
-  max-width: 100% !important; /* 부모 요소의 너비에 맞게 꽉 차도록 설정 */
-  box-sizing: border-box; /* padding과 border가 포함되도록 설정 */
-  padding: 12px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
   margin: 5px 0;
   border: 1px solid #333;
   border-radius: 6px;
   font-size: 14px;
   background-color: #fff;
+  text-align: center;
 }
 
 .ininput:focus {
@@ -110,8 +111,8 @@
 .tablewrap th,
 .tablewrap td {
   border: 1px solid #333;
-  text-align: left;
-  padding: 12px;
+  text-align: center;
+  padding: 8px;
 }
 
 .tablewrap th {
@@ -172,4 +173,24 @@
 }
 .none {
   display: none;
+}
+.input-box {
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  display: flex;
+  line-height: 2rem !important;
+  padding: 0.2em 0.4em !important;
+  gap: 50px;
+  justify-content: center;
+}
+
+.input-inbox {
+  height: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="radio"] {
+  vertical-align: -10px !important;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/table2.css" />
+    <link rel="stylesheet" href="../css/details.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <img
+          onclick="gohome()"
+          class="icon"
+          src="../daiso/homeicon.png"
+          alt="..."
+        />
+      </div>
+      <!-- <div><img class="icon" src="../daiso/shoppingcart.png" alt="..." /></div> -->
+      <div>DAMOISO</div>
+      <div class="iconbox">
+        <img class="icon" src="../daiso/personicon.png" alt="..." />
+        <img class="icon" src="../daiso/LLLicon.png" alt="..." />
+        <div onclick="shoppingbtn()" class="shoppingcart">
+          <img class="icon" src="../daiso/shoppingbagicon.png" alt="..." />
+          <div class="circlenum"></div>
+        </div>
+      </div>
+    </div>
+    <div class="main-wrap"></div>
+    <script src="../js/header.js"></script>
+    <script src="../js/details.js"></script>
+  </body>
+</html>
